@@ -5,7 +5,7 @@ A simple and customizable bodycam UI inspired by the Axon Body Cam™, made with
 (Don't question why it's so late)
 
 ## Installation
-First, install AutoHotkey v1.1 from https://www.autohotkey.com/. Then, download the files by clicking the green `<> Code ↓` button and then clicking the "Download ZIP" option. Unzip it in your directory of choice. Right-click `KlartextMonoBold.ttf` and hit the `Install` button to install the font to your device. Change the config (see below for how) and open `Bodycam.ahk`. You're done!
+First, install AutoHotkey v1.1 from https://www.autohotkey.com/. Then, download the files by clicking on the latest release (or [here](https://github.com/thelegendfox/bodycam-ui/releases/latest)). Unzip it in your directory of choice. Right-click `KlartextMonoBold.ttf` and hit the `Install` button to install the font to your device. Change the config (see below for how) and open `Bodycam.ahk`. You're done!
 
 ## Usage
 Hit your clipping key to start the bodycam! Upon doing so, it'll hit the `MedalClippingKey` button (set in the config), start recording (with the `MedalRecordingButton`), play the Axon Body Cam™ "beep-beep" sound, and enable a flashing green "Recording" light.<br/>
@@ -15,13 +15,13 @@ Then, hit Ctrl+F1 to close it, and F12 to reset it (useful when moving the UI ar
 
 Note: **This is intended to REPLACE your clipping and recording keys,** so please don't report any bugs that occur if you hit either while the bodycam is in "Record" mode. 
 
-## Config
+### Config
 To change your bodycam settings, open `Config.ahk` in a standard text editor/IDE such as Notepad++ or VSCode. Follow the instructions in there and then simply open `Bodycam.ahk`.
 
 ## Requests & reporting
 To report a bug or request a feature, please open an issue or a pull request using the tabs in the header.
 
-## Supported platforms
+### Supported platforms
 This only supports devices running Windows and has only been tested on Windows 11 specifically. I do not intend to support other OSs or platforms. If you wish to add these features yourself, open a pull request.
 
 ### Disclaimers
