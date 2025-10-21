@@ -20,4 +20,4 @@ global CenterY := 100 ; Higher Y is downwards.
 ; https://www.autohotkey.com/docs/v1/Hotkeys.htm#Symbols (e.g.: !F7 for Alt+F7)
 global BodycamClippingKey := "F1"
 global MedalClippingKey := "F8"
-global MedalRecordingKey := "F7"
+global MedalRecordingKey := "!F7"
