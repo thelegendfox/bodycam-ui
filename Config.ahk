@@ -6,11 +6,16 @@ global DepartmentName := "Sarasota County Sheriff's Office"
 global TimeZone := "CST" ; https://en.wikipedia.org/wiki/List_of_time_zone_abbreviations
 global UseUTC := false ; Set to "true" to use UTC.
 
+; The "Recording Alert", a system that beeps every few minutes to say "hey, you're still recording!"
+global RecordingAlertEnabled := true
+global RecordingAlertInterval := 1 ; (In minutes) How often the bodycam "beeps" to alert you it's still recording. Please do not set to 0.
+
 ; These are the files used. You can customize them with relative file paths.
 global ActiveRecordingFile := ".\resources\green_dot.png"
 global NotRecordingFile := ".\resources\red_dot.png"
 global LegendfoxFile := ".\resources\fop.png"
-global BodycamSound := ".\resources\BodyCam Sound Effect LowVol.wav"
+global BodycamSound := ".\resources\R5_alert_axon.wav"
+global IntervalAlertSound := ".\resources\R5_alert_alt.wav"
 
 ; X/Y coordinates of where the bodycam is positioned.
 global CenterX := 1270 ; Higher X is rightwards.
