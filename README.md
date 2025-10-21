@@ -5,7 +5,8 @@ A simple and customizable bodycam UI inspired by the Axon Body Cam™, made with
 (Don't question why it's so late)
 
 ## Installation
-First, install AutoHotkey v1.1 from https://www.autohotkey.com/. Then, download the files by clicking on the latest release (or [here](https://github.com/thelegendfox/bodycam-ui/releases/latest)). Unzip it in your directory of choice. Right-click `KlartextMonoBold.ttf` and hit the `Install` button to install the font to your device. Change the config (see below for how) and open `Bodycam.ahk`. You're done!
+First, install AutoHotkey v1.1 from https://www.autohotkey.com/. Then, download the files by at the latest release ([here](https://github.com/thelegendfox/bodycam-ui/releases/latest)), then click 
+`Legendfox-R5-Bodycam-Overlay.zip`. Unzip this in your directory of choice. Right-click `KlartextMonoBold.ttf` and hit the `Install` button to install the font to your device. Change the config (see below for how) and open `Bodycam.ahk`. You're done!
 
 ## Usage
 Hit your clipping key to start the bodycam! Upon doing so, it'll hit the `MedalClippingKey` button (set in the config), start recording (with the `MedalRecordingButton`), play the Axon Body Cam™ "beep-beep" sound, and enable a flashing green "Recording" light.<br/>
