@@ -3,7 +3,6 @@
 
 ; Wishlist:
 ;   - On start, selection box for current agency, or custom.
-;   - Alerts when time has passed (e.g. 1m, 3m, 5m, 10m, 15m)
 
 #include Config.ahk
 
@@ -116,6 +115,7 @@ BodycamClip:
     {
         ; MsgBox, "Disabling recording"
         SetTimer, BlinkActiveTimer, Off
+        SetTimer, RecordingAlertTimer, Off
         Gui, NotRec:Show, x%RecordingX% y%RecordingY% NoActivate
         Gui, ActRec:Hide
 
@@ -144,6 +144,15 @@ BodycamClip:
         Sleep, 1000
 
         SetTimer, BlinkActiveTimer, 500
+
+        If (RecordingAlertEnabled == true and RecordingAlertInterval not <= 0)
+        {
+            ONE_MINUTE := 1000 * 60 ; 1000ms = 1 second * 60 = one minute
+            MINUTES_TO_RUN := ONE_MINUTE * RecordingAlertInterval
+            MsgBox, %MINUTES_TO_RUN% %RecordingAlertInterval%
+            ; MINUTES_TO_RUN = 6000 ; testing
+            SetTimer, RecordingAlertTimer, %MINUTES_TO_RUN%
+        }
 
     }
 
@@ -193,6 +202,15 @@ BlinkActive() {
         Gui, ActRec:Show, x%RecordingX% y%RecordingY% NoActivate
     else
         Gui, ActRec:Hide
+}
+
+RecordingAlertTimer:
+    RecordingAlert()
+return
+
+RecordingAlert() {
+    SoundPlay, %IntervalAlertSound%
+    return
 }
 
 ; F1::MsgBox, %BodycamClippingKey%
