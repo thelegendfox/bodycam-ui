@@ -131,6 +131,7 @@ BodycamClip:
         global IsRecording := 1
 
         SendEvent, {%MedalClippingKey%}
+        Sleep, 700 ; Delay otherwise it doesn't clip properly
         SendEvent, {%MedalRecordingKey%}
 
         Sleep, 700
@@ -195,3 +196,4 @@ BlinkActive() {
 }
 
 ; F1::MsgBox, %BodycamClippingKey%
+
