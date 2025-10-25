@@ -149,7 +149,7 @@ BodycamClip:
         {
             ONE_MINUTE := 1000 * 60 ; 1000ms = 1 second * 60 = one minute
             MINUTES_TO_RUN := ONE_MINUTE * RecordingAlertInterval
-            MsgBox, %MINUTES_TO_RUN% %RecordingAlertInterval%
+            ; MsgBox, %MINUTES_TO_RUN% %RecordingAlertInterval%
             ; MINUTES_TO_RUN = 6000 ; testing
             SetTimer, RecordingAlertTimer, %MINUTES_TO_RUN%
         }
@@ -214,4 +214,5 @@ RecordingAlert() {
 }
 
 ; F1::MsgBox, %BodycamClippingKey%
+
 
