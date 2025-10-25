@@ -2,7 +2,7 @@
 name: Bug report
 about: Something doesn't seem right...
 title: "[BUG]"
-labels: bug
+labels: bug, triage
 assignees: thelegendfox
 
 ---

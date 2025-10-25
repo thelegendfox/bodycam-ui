@@ -2,7 +2,7 @@
 name: Feature request
 about: We can make this better!
 title: "[FEAT]"
-labels: enhancement
+labels: enhancement, triage
 assignees: thelegendfox
 
 ---
