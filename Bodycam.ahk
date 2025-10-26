@@ -6,11 +6,15 @@
 
 #include Config.ahk
 
-; This option shouldn't be edited.
+; These options shouldn't be edited.
 global TopLineText := "REC   LEGENDFOX Bodycam R5" ; Spaces necessary for, well, spacing.
+global ActiveRecordingFile := ".\resources\green_dot.png"
+global NotRecordingFile := ".\resources\red_dot.png"
 
-; Assign dynamic hotkey.
-Hotkey, %BodycamClippingKey%, BodycamClip
+; Assign dynamic hotkeys.
+Hotkey, %BodycamTrigger%, TriggerBodycam
+Hotkey, %ExitTrigger%, ExitBodycam
+Hotkey, %ReloadTrigger%, ReloadBodycam
 
 ; Create name GUI (i.e. "Rockethead293").
 ; Same stuff as the time.
@@ -76,14 +80,14 @@ Gui, NotRec:Add, Picture, x0 y0 h15 w15, %NotRecordingFile%
 WinSet, TransColor, TransColor 150
 Gui, NotRec:Show, x%RecordingX% y%RecordingY% NoActivate
 
-; Create LEGENDFOX watermark.
-LegendfoxX := CenterX + 310
-LegendfoxY := CenterY - 38
-Gui Fox:+LastFound +AlwaysOnTop -Caption +ToolWindow
-Gui, Fox:Color, TransColor
-Gui, Fox:Add, Picture, x0 y0 h120 w120, %LegendfoxFile%
-WinSet, TransColor, TransColor 150
-Gui, Fox:Show, x%LegendfoxX% y%LegendfoxY% NoActivate
+; Create image watermark (right side).
+WatermarkX := CenterX + 310
+WatermarkY := CenterY - 38
+Gui Watermark:+LastFound +AlwaysOnTop -Caption +ToolWindow
+Gui, Watermark:Color, TransColor
+Gui, Watermark:Add, Picture, x0 y0 h120 w120, %LogoFile%
+WinSet, TransColor, TransColor 100
+Gui, Watermark:Show, x%WatermarkX% y%WatermarkY% NoActivate
 
 return
 
@@ -109,7 +113,7 @@ return
 ; And finally, the toggle.
 global IsRecording := 0 ; 0 means Not recording
 
-BodycamClip:
+TriggerBodycam:
 
     If (global IsRecording == 1 )
     {
@@ -121,7 +125,7 @@ BodycamClip:
 
         global IsRecording := 0
 
-        SendEvent, {%MedalRecordingKey%}
+        SendEvent, {%RecordingKey%}
     }
     else
     {
@@ -130,9 +134,9 @@ BodycamClip:
 
         global IsRecording := 1
 
-        SendEvent, {%MedalClippingKey%}
-        Sleep, 700 ; Delay otherwise it doesn't clip properly
-        SendEvent, {%MedalRecordingKey%}
+        SendEvent, {%ClippingKey%}
+        Sleep, %RecordingWaitTime% ; Delay otherwise it doesn't clip properly
+        SendEvent, {%RecordingKey%}
 
         Sleep, 700
         SoundPlay, %BodycamSound%
@@ -158,7 +162,7 @@ BodycamClip:
 
 return
 
-^F1::
+ExitBodycam:
     Gui, Closing:+LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
     Gui, Closing:Color, TransColor
     Gui, Closing:Font, s32, Arial  ; Set a large font size (32-point).
@@ -169,7 +173,7 @@ return
     Sleep, 1000
 ExitApp
 
-F12::
+ReloadBodycam:
     ; return
     ; If you want to enable the F12-to-reload feature, remove the ";" in front of the "return" just above this.
 
@@ -213,6 +217,5 @@ RecordingAlert() {
     return
 }
 
-; F1::MsgBox, %BodycamClippingKey%
-
+; F1::MsgBox, %BodycamTrigger%
 
