@@ -34,5 +34,7 @@ ReloadTrigger := "F12" ; And this reloads it.
 
 ; These two aren't intended to be pressed by the user while the bodycam is on. Instead, they're set
 ; in other apps, e.g. Medal, and are pressed by the program itself when the trigger is hit.
+; MODIFIER KEYS ARE NOT SUPPORTED DUE TO AHK ISSUES!
+; As modifier keys aren't supported, you CANNOT use the default Medal recording keybind (Alt+F7). WARNING!
 ClippingKey := "F8"
-RecordingKey := "!F7"
+RecordingKey := "F7"
