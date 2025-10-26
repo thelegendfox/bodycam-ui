@@ -22,4 +22,4 @@ This only supports devices running Windows and has only been tested on Windows 1
 
 ### Disclaimers
 
-The Sarasota County Sheriff's Office, both online groups and the "real one", have no relation to this project; the SCSO text is here solely for demonstrative purposes. To the best of my knowledge, the usage of the Klartext Mono font does not violate copyright law. Please open an issue if you wish to request a copyright-related removal of the font.
+The Sarasota County Sheriff's Office, both online groups and the "real one", have no relation to this project; the SCSO text is here solely for demonstrative purposes. To the best of my knowledge, the usage of the Klartext Mono font does not violate copyright law. Please open an issue if you wish to request a copyright-related removal of the font. Additionally, the Axon logos are registered trademarks of Axon. I claim no ownership over them and they are packaged here only for utility.
