@@ -1,0 +1,5 @@
+***This release includes multiple alternative logos inside of the /resources/logos/ directory***
+
+To use a new logo from within this directory, drag it out of the "logos/" directory and into the plain "resources/" directory. Set the LogoFile in Config.ahk to the name of the new logo and restart the bodycam.
+
+To use a logo from the Internet, simply drag it into the resources/ directory and set its name in Config.ahk.
