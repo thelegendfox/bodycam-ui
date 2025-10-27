@@ -11,7 +11,7 @@ global UseUTC := false ; Set to "true" to use UTC.
 
 ; The "Recording Alert", a system that beeps every few minutes to say "hey, you're still recording!"
 global RecordingAlertEnabled := true
-global RecordingAlertInterval := 0.1 ; (In minutes) How often the bodycam "beeps" to alert you it's still recording. Please do not set to 0.
+global RecordingAlertInterval := 3 ; (In minutes) How often the bodycam "beeps" to alert you it's still recording. Please do not set to 0.
 
 ; These are the files used. You can customize them with relative file paths.
 global LogoFile := ".\resources\fop.png"
