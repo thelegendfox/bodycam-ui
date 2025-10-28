@@ -139,7 +139,7 @@ TriggerBodycam:
         SendEvent, {%RecordingKey%}
 
         Sleep, 700
-        SoundPlay, %BodycamSound%
+        SoundPlay, %TriggerSound%
 
         Sleep, 200
 
