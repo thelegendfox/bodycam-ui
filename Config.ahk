@@ -23,8 +23,8 @@ global IntervalAlertSound := ".\resources\R5_alert_alt.wav"
 global RecordingWaitTime := 1200 ; In milliseconds!!!
 
 ; X/Y coordinates of where the bodycam is positioned.
-global CenterX := 1270 ; Higher X is rightwards.
-global CenterY := 100 ; Higher Y is downwards.
+CenterX := 1270 ; Higher X is rightwards.
+CenterY := 100 ; Higher Y is downwards.
 
 ; Sets the hotkeys. Make sure they're accurate. See the below link for how to add modifier keys.
 ; https://www.autohotkey.com/docs/v1/Hotkeys.htm#Symbols (e.g.: !F7 for Alt+F7)
